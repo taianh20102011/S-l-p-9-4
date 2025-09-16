@@ -103,6 +103,7 @@ body {
 }
 
 .cell.empty {
+    margin-left: 20px;
     border: none;
     background: transparent;
     box-shadow: none;
@@ -199,4 +200,5 @@ body {
     top: -35px;
     font-size: 28px;
 }
+
 
