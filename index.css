@@ -1,0 +1,202 @@
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(135deg, #e3f2fd, #f9fbfd);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Bảng tiêu đề */
+.board {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    background: linear-gradient(90deg, #0d47a1, #1976d2);
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 14px;
+    letter-spacing: 1px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Lớp học */
+.classroom {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+}
+
+/* Hàng bàn */
+.row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 22px;
+    padding-bottom: 6px;
+}
+
+/* Bàn học */
+.desk {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 160px;
+    background: #ffffff;
+    border: 2px solid #1976d2;
+    border-radius: 16px;
+    padding: 10px;
+    transition: all 0.25s ease;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.desk:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.2);
+}
+
+/* Ghế học sinh */
+.seat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 72px;
+}
+
+.seat img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #2196f3;
+    margin-bottom: 6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.seat img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 150, 255, 0.4);
+}
+
+.seat span {
+    font-size: 13px;
+    text-align: center;
+    font-weight: 600;
+    color: #444;
+    line-height: 1.3;
+}
+
+/* Ô trống giữ khoảng cách */
+.cell {
+    flex: 0 0 auto;
+    width: 160px;
+    height: 80px;
+}
+
+.cell.empty {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Hàng cuối (nếu muốn hiển thị trống đẹp mắt) */
+.row.last-row .cell.empty {
+    background: transparent;
+    border: 2px dashed #bbb;
+    border-radius: 12px;
+}
+
+/* Cửa lớp */
+.door {
+    position: absolute;
+    left: -70px;
+    bottom: 0;
+    width: 54px;
+    height: 120px;
+    background: linear-gradient(180deg, #6d4c41, #8d6e63);
+    border: 3px solid #333;
+    border-radius: 10px;
+    text-align: center;
+    writing-mode: vertical-rl;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 38px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .board {
+        font-size: 24px;
+        padding: 12px;
+    }
+    .desk {
+        width: 140px;
+    }
+    .seat img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .board {
+        font-size: 20px;
+        padding: 10px;
+    }
+    .desk {
+        width: 120px;
+    }
+    .seat img {
+        width: 44px;
+        height: 44px;
+    }
+    .seat span {
+        font-size: 11px;
+    }
+    .door {
+        left: -60px;
+        width: 44px;
+        height: 110px;
+        font-size: 12px;
+    }
+}
+
+/* Bàn giáo viên */
+.teacher-desk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 100px;
+    background: linear-gradient(135deg, #ffcc80, #ffb74d);
+    border: 3px solid #e65100;
+    border-radius: 16px;
+    margin-left: auto; /* đẩy sang bên phải */
+    margin-top: 30px; /* cách hàng 1 một chút */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    font-weight: bold;
+    color: #4e342e;
+    text-align: center;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.teacher-desk::after {
+    content: "👩‍🏫";
+    position: absolute;
+    top: -35px;
+    font-size: 28px;
+}
+
