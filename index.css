@@ -103,7 +103,7 @@ body {
 }
 
 .cell.empty {
-    margin-left: 30px;
+    margin-left: 20px;
     margin-right: 10px;
     border: none;
     background: transparent;
@@ -216,6 +216,7 @@ body {
   font-size: 20px;
   color: white;
 }
+
 
 
 
