@@ -50,8 +50,13 @@
       event.preventDefault();
     });
   </script>
+      <!-- Loading screen -->
+  <div id="loading-screen">
+    <div class="spinner"></div>
+    <p>Đang tải, vui lòng chờ...</p>
+  </div>
     <!-- Ghi chú: bọc .classroom bởi .classroom-wrap -->
-    <div class="board">Sơ đồ lớp 9/4</div>
+    <div class="board" id="content" style="display: none;">Sơ đồ lớp 9/4</div>
     <div class="classroom-wrap">
         <div class="classroom">
 
@@ -201,11 +206,13 @@
 
 
         <div class="door">Cửa</div>
+          <script src="script.js"></script>
     </div>
 </body>
 
 
 </html>
+
 
 
 
