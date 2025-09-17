@@ -137,7 +137,7 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
     .board {
         font-size: 24px;
         padding: 12px;
@@ -257,6 +257,7 @@ body {
     max-width: 100%;
   }
 }
+
 
 
 
