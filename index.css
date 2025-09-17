@@ -6,7 +6,7 @@ body {
     flex-direction: column;
     background: linear-gradient(135deg, #e3f2fd, #f9fbfd);
     margin: 0;
-    padding: 0;
+    padding-left: 130px;
     color: #333;
 }
 
@@ -257,6 +257,7 @@ body {
     max-width: 100%;
   }
 }
+
 
 
 
