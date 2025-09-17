@@ -203,45 +203,48 @@ body {
 }
 
 
-/* Loader phủ màn hình */
-#loader-overlay {
+/* Màn hình loading phủ toàn trang */
+.loading-screen {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: white; /* hoặc màu background của bạn */
+  background: #f0f4f8;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   z-index: 9999;
+  animation: fadeOut 2s ease forwards;
+  animation-delay: 3s; /* Hiện 3s rồi biến mất */
 }
 
-/* Spinner ví dụ: một hình tròn quay */
-.loader .spinner {
-  width: 80px;
-  height: 80px;
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid #3498db; /* màu xanh hoặc màu bạn muốn */
+/* Vòng tròn xoay */
+.spinner {
+  border: 8px solid #e0e0e0;
+  border-top: 8px solid #3498db;
   border-radius: 50%;
+  width: 60px;
+  height: 60px;
   animation: spin 1s linear infinite;
+  margin-bottom: 15px;
 }
 
-/* Animation spin */
+/* Xoay vòng */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-/* Responsive: thay đổi kích thước spinner ở màn hình nhỏ */
-@media (max-width: 600px) {
-  .loader .spinner {
-    width: 50px;
-    height: 50px;
-    border: 6px solid #f3f3f3;
-    border-top: 6px solid #3498db;
+/* Biến mất dần */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
   }
 }
+
 
 
 
