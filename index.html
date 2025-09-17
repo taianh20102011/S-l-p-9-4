@@ -5,21 +5,48 @@
     <meta charset="UTF-8">
     <title>Sơ đồ lớp 9/4</title>
     <link rel="stylesheet" href="index.css">
-    <style>
-  img {
-    -webkit-user-drag: none;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    user-select: none;
-  }
-</style>
-<script>
-  // Chặn chuột phải
-  document.addEventListener('contextmenu', event => event.preventDefault());
-</script>
-</head>
+  <!-- CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Referrer-Policy" content="no-referrer">
+
+  <style>
+    /* Không cho kéo ảnh */
+    img {
+      -webkit-user-drag: none;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    /* watermark mỗi ảnh (ví dụ phía góc dưới bên phải) */
+    .watermark-container {
+      position: relative;
+      display: inline-block;
+    }
+    .watermark-container img {
+      display: block;
+    }
+    .watermark-container::after {
+      content: "Lớp 9/4";
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      color: white;
+      font-size: 14px;
+      opacity: 0.6;
+      pointer-events: none; /* để lớp watermark không chặn tương tác nếu cần */
+      text-shadow: 1px 1px 2px black;
+    }
+  </style>
 
 <body>
+      <script>
+    // Chặn chuột phải toàn trang
+    document.addEventListener('contextmenu', function(event) {
+      event.preventDefault();
+    });
+  </script>
     <!-- Ghi chú: bọc .classroom bởi .classroom-wrap -->
     <div class="board">Sơ đồ lớp 9/4</div>
     <div class="classroom-wrap">
@@ -176,6 +203,7 @@
 
 
 </html>
+
 
 
 
