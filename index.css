@@ -202,55 +202,59 @@ body {
     font-size: 28px;
 }
 
-
-/* Đảm bảo viewport cho responsive */
-head meta[name="viewport"] {
-  /* Nếu chưa có, trong <head> của HTML: */
-  /* <meta name="viewport" content="width=device-width, initial-scale=1"> */
+/* Loader phủ toàn màn hình */
+#loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white; /* hay màu nền của trang bạn */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
-/* Wrapper chứa sơ đồ lớp */
-.main-container, .wrapper, .school-map, /* tên class tùy theo mã bạn dùng */ {
+/* Spinner */
+.loader .spinner {
+  width: 80px;
+  height: 80px;
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db; /* đổi màu nếu muốn */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Container chính để giữ sơ đồ lớp luôn căn giữa */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* căn giữa ngang */
+  justify-content: flex-start;  /* nếu muốn nội dung bắt đầu từ trên */
   width: 100%;
-  max-width: 900px; /* chỉnh theo phù hợp với ảnh/khung lớp */
-  margin: 0 auto; /* căn giữa ngang */
-  padding: 10px;   /* hoặc ít hơn nếu màn hình nhỏ */
+  max-width: 900px;      /* giới hạn chiều rộng tối đa trên màn hình lớn */
+  margin: 0 auto;        /* căn giữa ngang trong màn hình lớn */
+  padding: 10px;
   box-sizing: border-box;
 }
 
-/* Đảm bảo hình ảnh/avatars co lại khi màn hình nhỏ */
-.main-container img, .wrapper img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Ví dụ responsive cho nhỏ hơn 768px */
+/* Responsive cho thiết bị nhỏ */
 @media (max-width: 768px) {
+  .loader .spinner {
+    width: 50px;
+    height: 50px;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+  }
   .main-container {
     padding: 5px;
     max-width: 100%;
   }
-  /* Nếu có các khung con nằm ngang nhiều, có thể chỉnh để chúng wrap xuống hàng mới */
-  .row-class { /* row chứa avatar/hạng lớp */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .row-class .item { /* mỗi avatar / ô lớp */
-    margin: 5px;
-  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
