@@ -223,7 +223,7 @@ body {
   border: 8px solid #f3f3f3;
   border-top: 8px solid #3498db; /* đổi màu nếu muốn */
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+  animation: spin 4s linear infinite;
 }
 
 @keyframes spin {
@@ -257,4 +257,5 @@ body {
     max-width: 100%;
   }
 }
+
 
