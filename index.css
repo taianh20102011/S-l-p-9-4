@@ -88,7 +88,7 @@ body {
 }
 
 .seat span {
-    font-size: 13px;
+    font-size: 11.55px;
     text-align: center;
     font-weight: 600;
     color: #444;
@@ -216,6 +216,7 @@ body {
   font-size: 20px;
   color: white;
 }
+
 
 
 
