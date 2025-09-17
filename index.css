@@ -103,8 +103,8 @@ body {
 }
 
 .cell.empty {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 30px;
+    margin-right: 10px;
     border: none;
     background: transparent;
     box-shadow: none;
@@ -216,6 +216,7 @@ body {
   font-size: 20px;
   color: white;
 }
+
 
 
 
