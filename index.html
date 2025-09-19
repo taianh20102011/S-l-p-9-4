@@ -5,6 +5,47 @@
     <meta charset="UTF-8">
     <title>Sơ đồ lớp 9/4</title>
     <link rel="stylesheet" href="index.css">
+      <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .header {
+      background: linear-gradient(90deg, #1e88e5, #1976d2);
+      color: white;
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .teacher-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #64b5f6;
+      margin-right: 15px;
+      object-fit: cover;
+      background-color: white;
+    }
+
+    .teacher-info {
+      font-size: 14px;
+      color: #e3f2fd;
+      text-align: left;
+    }
+
+    .header-title {
+      flex: 1;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <div id="loader-overlay">
@@ -14,9 +55,17 @@
   </div>
 
   <div class="main-container">
-    <!-- Ghi chú: bọc .classroom bởi .classroom-wrap -->
-    <div class="board">Sơ đồ lớp 9/4
-      <div class="seat" style="text-align: center;"><img src="Congoc.jpg"><span>Huỳnh Thị Phương Ngọc (GVCN)</span></div></div>
+  <div class="header">
+    <!-- Ảnh giáo viên -->
+    <img src="assets/gvcn.jpg" alt="GVCN" class="teacher-img">
+
+    <!-- Thông tin giáo viên -->
+    <div class="teacher-info">
+      <p><b>Huỳnh Thị Phương Ngọc</b><br>(GVCN)</p>
+    </div>
+
+    <!-- Tiêu đề -->
+    <div class="header-title">Sơ đồ lớp 9/4</div>
     <div class="classroom-wrap">
         <div class="classroom">
 
@@ -182,6 +231,7 @@
 
 
 </html>
+
 
 
 
