@@ -204,7 +204,7 @@ body {
 .teacher-desk::after {
     content: "👩‍🏫";
     position: absolute;
-    top: -35px;
+    top: 65px;
     font-size: 28px;
 }
 
@@ -263,6 +263,7 @@ body {
     max-width: 100%;
   }
 }
+
 
 
 
